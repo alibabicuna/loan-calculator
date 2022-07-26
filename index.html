@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://kit.fontawesome.com/d147822dfc.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="style.css">
+  <title>Kamate</title>
+</head>
+
+<body>
+
+  <div class="main">
+
+    <form class="form">
+      <h1>Loan calculator</h1>
+     <!--  <div class="question-tooltip">
+        <i class="fa-solid fa-question"></i>
+        <p class="explain">
+          Lorem ipsum dolor, sit amet consectetur
+          adipisicing elit. Similique praesentium dolorum voluptatibus
+        </p>
+      </div> -->
+
+      <div class="fields">
+        <h3>Enter the loan amount</h3>
+        <input id="loan" type="number" required>
+      </div>
+
+      <div class="fields">
+        <h3>Enter the interest rate</h3>
+        <input id="intrest" type="number" step=".01" required>
+      </div>
+
+      <div class="fields">
+        <h3>Enter the years of payment</h3>
+        <input id="period" type="number" required>
+      </div>
+
+      <button id="result" type="submit">Calculate</button>
+    </form>
+
+    <div id="results" class="results">
+      <div class="output">
+        <h3>Monthly payment</h3>
+        <h2 id="rateLoan"></h2>
+      </div>
+
+      <div class="output">
+        <h3>Total interest</h3>
+        <h2 id="calculatedInterest"></h2>
+      </div>
+
+      <div class="output">
+        <h3>Total return</h3>
+        <h2 id="totalReturn"></h2>
+      </div>
+
+    </div>
+
+  </div>
+
+
+
+
+  <script src="script.js"></script>
+</body>
+
+</html>

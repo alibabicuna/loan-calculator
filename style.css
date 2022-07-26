@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,100;1,300;1,400;1,500&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --black: rgb(43, 56, 69);
+  --black-light: rgb(176, 179, 186);
+  --white-light: rgba(255, 255, 255, 0.5);
+  --violet: rgba(168, 83, 219, 0.8);
+  --green-action: rgb(141, 208, 77);
+  --blue: rgba(0, 0, 255, 0.5);
+
+}
+
+body {
+  font-family: 'Roboto', 'sans-serif';
+  color: var(--black);
+  background-image:
+    linear-gradient(to bottom, var(--violet) 80%, var(--white-light)),
+    url(img/background.jpg);
+  background-size: cover;
+  background-position-x: right;
+  height: 100vh;
+
+}
+
+.form {
+  background-color: white;
+  padding: 30px;
+  flex-direction: column;
+}
+
+.fields {
+  margin: 10px 0;
+}
+
+.fields:last-of-type {
+  margin-bottom: 40px;
+}
+
+.fields h3 {
+  margin: 10px 0;
+}
+
+input {
+  border: none;
+  border-bottom: 2px solid var(--black-light);
+  width: 90%;
+}
+
+input:focus-visible {
+  outline: none;
+  border-bottom: 2px solid var(--black);
+}
+
+.form button {
+  background-color: var(--green-action);
+  border-radius: 50px;
+  border: none;
+  box-shadow: 0px 5px 20px var(--green-action);
+  color: white;
+  height: 30px;
+  width: 80px;
+  align-self: end;
+}
+
+.results {
+  margin-top: 30px;
+  color: white;
+  background-image:
+    linear-gradient(var(--blue), var(--blue)),
+    url(img/background.jpg);
+  background-position: center;
+  background-size: cover;
+  justify-content: space-around;
+}
+
+.form, .results {
+  display: flex;
+  box-shadow: 0px 0px 10px var(--black);
+}
+
+.output {
+  text-align: center;
+  margin: 0 10px;
+}
+
+.explain {
+  display: none;
+}
+
+/* .question-tooltip:hover .explain {
+  display: block;
+} */
+
+@media (min-width: 640px) {
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+  }
+
+  .main {
+    display: flex;
+    width: 90%;
+  }
+
+  .results {
+    margin: 0;
+    flex-direction: column;
+  }
+
+  .form, .results {
+    width: 50%;
+  }
+
+}
